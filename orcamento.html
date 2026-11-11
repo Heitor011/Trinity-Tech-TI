@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora de Orçamento | Trinity Tech</title>
+<meta name="description" content="Simule em tempo real o orçamento de manutenção, limpeza, upgrades e redes para seu computador ou notebook.">
+<meta name="theme-color" content="#082b4c">
+<link rel="icon" type="image/png" href="assets/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="topbar"><div class="container topbar-in">
+    <span>Seg–Sex: 08:30 às 18:30 | Sáb: 09:00 às 13:00</span>
+    <span class="topbar-r"><span>Fixo: (11) 3420-9900</span><span>WhatsApp: (11) 98765-4321</span></span>
+  </div></div>
+  <div class="container nav-row">
+    <a class="brand" href="index.html" aria-label="Trinity Tech - início">
+      <img src="assets/img/logo.png" alt="Logo Trinity Tech" width="48" height="48">
+      <span><strong>Trinity Tech</strong><small>Manutenção &amp; Redes</small></span>
+    </a>
+    <nav id="menu" class="nav" aria-label="Principal"><a href="index.html">Início</a><a href="index.html#servicos">Serviços</a><a href="index.html#diagnostico">Diagnóstico</a><a href="index.html#processo">Como funciona</a><a href="index.html#depoimentos">Depoimentos</a><a href="orcamento.html" aria-current="page">Calculadora</a><a href="index.html#contato">Contato</a></nav>
+    <a class="btn btn-navy nav-cta" href="orcamento.html"><span class="material-symbols-outlined " aria-hidden="true">calculate</span><span>Orçamento Grátis</span></a>
+    <button class="menu-btn" id="menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span class="material-symbols-outlined " aria-hidden="true">menu</span></button>
+  </div>
+</header>
+<main>
+
+<section class="page-hero"><div class="container">
+  <span class="pill pill-light"><i class="dot"></i>Simulador de orçamento</span>
+  <h1>Simulador Interativo de Orçamento</h1>
+  <p class="lead">Escolha o equipamento e os serviços para ver uma estimativa em tempo real, com garantia de 90 a 180 dias e total segurança de dados.</p>
+  <ul class="metrics"><li><span class="material-symbols-outlined " aria-hidden="true">schedule</span><span><strong>24h a 48h</strong><small>Diagnóstico na bancada</small></span></li><li><span class="material-symbols-outlined " aria-hidden="true">shield_with_heart</span><span><strong>Até 180 dias</strong><small>Garantia estendida</small></span></li><li><span class="material-symbols-outlined " aria-hidden="true">fact_check</span><span><strong>24 pontos</strong><small>Checkup elétrico e térmico</small></span></li><li><span class="material-symbols-outlined " aria-hidden="true">savings</span><span><strong>10% OFF</strong><small>À vista no PIX</small></span></li></ul>
+</div></section>
+
+<section class="section tight"><div class="container calc">
+  <div class="calc-main">
+    <div class="card panel"><header><span class="n">1</span><div><h2>Selecione o equipamento</h2><p>Define o ferramental de bancada</p></div></header><div class="grid g2" id="devices"><button type="button" class="opt active" data-device="Desktop Gamer / Workstation" data-fee="0" aria-pressed="true"><span class="ico"><span class="material-symbols-outlined " aria-hidden="true">desktop_windows</span></span><strong>Desktop Gamer / Workstation</strong><span class="d">Gabinetes ATX/E-ATX, placas dedicadas RTX/Radeon, water coolers e fontes 80 Plus.</span><span class="tag">Diagnóstico avançado</span></button><button type="button" class="opt" data-device="Notebook / Ultrabook" data-fee="0" aria-pressed="false"><span class="ico"><span class="material-symbols-outlined " aria-hidden="true">laptop_mac</span></span><strong>Notebook / Ultrabook</strong><span class="d">Dell, Lenovo, Asus, Acer, HP e MacBooks (tela, carcaça e micro-solda).</span><span class="tag">Desmontagem fina</span></button><button type="button" class="opt" data-device="Servidor / Mini PC Corporativo" data-fee="50" aria-pressed="false"><span class="ico"><span class="material-symbols-outlined " aria-hidden="true">dns</span></span><strong>Servidor / Mini PC Corporativo</strong><span class="d">Racks, NAS, matrizes RAID e estações compactas empresariais.</span><span class="tag">Alta criticidade (+R$ 50)</span></button><button type="button" class="opt" data-device="Infraestrutura de Rede" data-fee="40" aria-pressed="false"><span class="ico"><span class="material-symbols-outlined " aria-hidden="true">router</span></span><strong>Infraestrutura de Rede</strong><span class="d">Switches gerenciáveis, roteadores Wi-Fi 6, access points e modems.</span><span class="tag">Diagnóstico de sinal (+R$ 40)</span></button></div></div>
+    <div class="card panel"><header><span class="n">2</span><div><h2>Sintoma principal</h2><p>Ajuda a direcionar os testes preliminares</p></div></header><div class="grid g3" id="symptoms"><button type="button" class="opt opt-sm active" data-symptom="Lento / Travando" aria-pressed="true"><span class="opt-h"><span class="material-symbols-outlined " aria-hidden="true">speed</span><strong>Lento / Travando</strong></span><span class="d">Engasgos no boot, 100% de uso de disco ou reinicializações.</span></button><button type="button" class="opt opt-sm" data-symptom="Superaquecendo" aria-pressed="false"><span class="opt-h"><span class="material-symbols-outlined " aria-hidden="true">thermostat</span><strong>Superaquecendo</strong></span><span class="d">Ar quente em excesso, ruído alto ou throttling térmico.</span></button><button type="button" class="opt opt-sm" data-symptom="Não liga / Pane" aria-pressed="false"><span class="opt-h"><span class="material-symbols-outlined " aria-hidden="true">power_off</span><strong>Não liga / Pane</strong></span><span class="d">Sem energia, LEDs apagados ou cheiro de queimado.</span></button><button type="button" class="opt opt-sm" data-symptom="Wi-Fi instável" aria-pressed="false"><span class="opt-h"><span class="material-symbols-outlined " aria-hidden="true">wifi_off</span><strong>Wi-Fi instável</strong></span><span class="d">Latência alta, pacotes perdidos ou zonas cegas de sinal.</span></button><button type="button" class="opt opt-sm" data-symptom="Preventiva periódica" aria-pressed="false"><span class="opt-h"><span class="material-symbols-outlined " aria-hidden="true">published_with_changes</span><strong>Preventiva periódica</strong></span><span class="d">Higienização anual para prolongar a vida útil dos circuitos.</span></button><button type="button" class="opt opt-sm" data-symptom="Quero mais potência" aria-pressed="false"><span class="opt-h"><span class="material-symbols-outlined " aria-hidden="true">upgrade</span><strong>Quero mais potência</strong></span><span class="d">Modernização de componentes para tarefas pesadas ou games.</span></button></div></div>
+    <div class="card panel"><header><span class="n">3</span><div><h2>Serviços e upgrades</h2><p>Combine os procedimentos que precisar</p></div></header><div class="stack" id="services"><label class="check-card"><input type="checkbox" class="svc-in" value="180" data-name="Limpeza Profunda + Pasta Térmica Premium" checked><span class="cc-main"><span class="cc-t"><strong>Limpeza Profunda + Pasta Térmica Premium</strong><span class=chip>Mais solicitado</span></span><span class="d">Desmontagem cuidadosa, limpeza com isopropílico, lubrificação de ventoinhas e pasta Arctic MX-4 ou Thermal Grizzly.</span></span><span class="cc-p">+ R$ 180</span></label><label class="check-card"><input type="checkbox" class="svc-in" value="260" data-name="Upgrade SSD NVMe M.2" checked><span class="cc-main"><span class="cc-t"><strong>Upgrade SSD NVMe M.2</strong><span class=chip>Até 3500MB/s</span></span><span class="d">Instalação de SSD Gen3/Gen4 e clonagem completa de programas e arquivos.</span></span><span class="cc-p">+ R$ 260</span></label><label class="check-card"><input type="checkbox" class="svc-in" value="220" data-name="Expansão de Memória RAM (DDR4/DDR5)"><span class="cc-main"><span class="cc-t"><strong>Expansão de Memória RAM (DDR4/DDR5)</strong></span><span class="d">Ativação de dual-channel e teste de integridade MemTest86 por 60 minutos.</span></span><span class="cc-p">+ R$ 220</span></label><label class="check-card"><input type="checkbox" class="svc-in" value="150" data-name="Otimização de Sistema, Formatação e Remoção de Malware"><span class="cc-main"><span class="cc-t"><strong>Otimização de Sistema, Formatação e Remoção de Malware</strong></span><span class="d">Remoção de spywares/rootkits, correção do sistema, drivers certificados e backup prévio.</span></span><span class="cc-p">+ R$ 150</span></label><label class="check-card"><input type="checkbox" class="svc-in" value="380" data-name="Reparo em Placa-mãe / BGA & SMD"><span class="cc-main"><span class="cc-t"><strong>Reparo em Placa-mãe / BGA & SMD</strong><span class=chip>Bancada especializada</span></span><span class="d">Câmera térmica, troca de capacitores e mosfets, regravação de BIOS e micro-solda.</span></span><span class="cc-p">+ R$ 380</span></label><label class="check-card"><input type="checkbox" class="svc-in" value="320" data-name="Configuração de Rede Mesh / Wi-Fi 6"><span class="cc-main"><span class="cc-t"><strong>Configuração de Rede Mesh / Wi-Fi 6</strong></span><span class="d">Mapeamento de espectro, VLANs para visitantes e equipe, QoS para reuniões e balanceamento de carga.</span></span><span class="cc-p">+ R$ 320</span></label></div></div>
+    <div class="card panel"><header><span class="n">4</span><div><h2>Modalidade de atendimento</h2><p>Como prefere que processemos seu equipamento</p></div></header><div class="grid g3" id="logistics"><label class="check-card col"><span class="cc-top"><span class="material-symbols-outlined " aria-hidden="true">store</span><input type="radio" name="logistics" value="0" data-name="Entrega no laboratório (Paulista)" checked></span><strong>Levar na Trinity</strong><span class="d">Bancada central na Av. Paulista, 1842, com estacionamento no prédio.</span><span class="price">Sem taxa (R$ 0)</span></label><label class="check-card col"><span class="cc-top"><span class="material-symbols-outlined " aria-hidden="true">two_wheeler</span><input type="radio" name="logistics" value="45" data-name="Coleta e entrega express"></span><strong>Leva & Traz Express</strong><span class="d">Coleta em maleta rígida anti-estática com seguro de trânsito para SP capital.</span><span class="price">+ R$ 45,00</span></label><label class="check-card col"><span class="cc-top"><span class="material-symbols-outlined " aria-hidden="true">home_repair_service</span><input type="radio" name="logistics" value="120" data-name="Técnico on-site"></span><strong>Técnico On-Site</strong><span class="d">Técnico até seu escritório ou home office com maleta técnica completa.</span><span class="price">+ R$ 120,00</span></label></div></div>
+  </div>
+  <aside class="summary card" aria-label="Resumo do orçamento">
+    <header><div><small class="eyebrow">Orçamento estimado</small><h2>Resumo do pedido</h2></div><span class="ico sm"><span class="material-symbols-outlined " aria-hidden="true">calculate</span></span></header>
+    <dl class="sum-meta"><div><dt>Dispositivo</dt><dd id="s-device"></dd></div><div><dt>Sintoma</dt><dd id="s-symptom"></dd></div><div><dt>Logística</dt><dd id="s-logistics"></dd></div></dl>
+    <p class="sum-label">Serviços selecionados</p>
+    <div class="sum-list" id="s-list"></div>
+    <div class="sum-line"><span>Subtotal</span><strong id="s-subtotal"></strong></div>
+    <div class="sum-line disc"><span><span class="material-symbols-outlined " aria-hidden="true">savings</span> Desconto PIX (10%)</span><strong id="s-discount"></strong></div>
+    <div class="total"><small>Valor final estimado (à vista no PIX)</small><strong id="s-total"></strong><div><span>Ou no cartão:</span><b id="s-inst"></b></div></div>
+    <form id="lead-form" class="form compact" novalidate>
+      <label>Seu nome completo<input id="lead-name" placeholder="Ex: Roberto Silva" required autocomplete="name"></label>
+      <label>WhatsApp para laudo e resposta<input id="lead-phone" type="tel" placeholder="(11) 98765-4321" required autocomplete="tel"></label>
+      <label>Marca / modelo do equipamento<input id="lead-specs" placeholder="Ex: Dell G15 RTX 3060"></label>
+      <button class="btn btn-wa btn-lg btn-block" type="submit"><span class="material-symbols-outlined " aria-hidden="true">chat</span><span>Enviar orçamento no WhatsApp</span></button>
+      <button class="btn btn-soft btn-block" type="button" id="print-btn"><span class="material-symbols-outlined " aria-hidden="true">print</span><span>Salvar / imprimir prévia</span></button>
+      <p class="form-err" id="lead-error" role="alert" hidden>Preencha nome e WhatsApp para enviar.</p>
+    </form>
+  </aside>
+</div></section>
+
+<section class="section section-alt"><div class="container narrow">
+  <header class="sec-head center"><h2>Perguntas frequentes</h2><p>Tire suas dúvidas antes de falar com a gente.</p></header>
+  <div class="stack"><details class="card faq"><summary>O valor calculado é o preço final?<span class="material-symbols-outlined " aria-hidden="true">expand_more</span></summary><p>O simulador dá uma estimativa para os serviços selecionados. Ao receber o equipamento na bancada, confirmamos se não há danos ocultos. Na maioria dos casos o valor se mantém.</p></details><details class="card faq"><summary>Quanto tempo demora o diagnóstico?<span class="material-symbols-outlined " aria-hidden="true">expand_more</span></summary><p>Preventivas e upgrades de SSD/RAM costumam levar 24 horas úteis. Panes elétricas complexas e recuperação de dados têm laudo em até 48 horas úteis.</p></details><details class="card faq"><summary>Como funciona a garantia?<span class="material-symbols-outlined " aria-hidden="true">expand_more</span></summary><p>Serviços de higienização e manutenção têm garantia de 90 dias. Componentes novos instalados por nós (SSD, RAM) têm garantia de 180 dias a 1 ano.</p></details><details class="card faq"><summary>Quais as formas de pagamento?<span class="material-symbols-outlined " aria-hidden="true">expand_more</span></summary><p>10% de desconto à vista no PIX. No cartão, até 12x sem juros. O pagamento é feito só após os testes e a sua aprovação.</p></details></div>
+</div></section>
+
+</main>
+<a class="wa-float" href="https://wa.me/5511987654321?text=Ol%C3%A1%2C%20estou%20no%20site%20da%20Trinity%20Tech%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" aria-label="Chamar no WhatsApp">
+  <span class="pulse"></span><span class="material-symbols-outlined " aria-hidden="true">chat</span><span class="wa-txt">Orçamento Rápido</span>
+</a>
+<footer class="site-footer">
+  <div class="container foot-grid">
+    <div>
+      <a class="brand" href="index.html"><img src="assets/img/logo.png" alt="" width="48" height="48"><span><strong>Trinity Tech</strong></span></a>
+      <p>Manutenção e limpeza de computadores e notebooks, redes Wi-Fi e suporte de TI com transparência e garantia.</p>
+    </div>
+    <div><h4>Links rápidos</h4><ul>
+      <li><a href="index.html#servicos">Serviços</a></li><li><a href="index.html#diagnostico">Auto-diagnóstico</a></li>
+      <li><a href="index.html#processo">Como funciona</a></li><li><a href="orcamento.html">Calculadora de orçamento</a></li></ul></div>
+    <div><h4>Atendimento</h4><ul class="contact">
+      <li><span class="material-symbols-outlined " aria-hidden="true">call</span>(11) 3420-9900</li><li><span class="material-symbols-outlined " aria-hidden="true">chat</span>(11) 98765-4321</li>
+      <li><span class="material-symbols-outlined " aria-hidden="true">mail</span>contato@trinitytech.com.br</li><li><span class="material-symbols-outlined " aria-hidden="true">location_on</span>Av. Paulista, 1842 – 12º andar – SP</li></ul></div>
+    <div><h4>Garantia &amp; confiança</h4><p>Garantia de 90 a 180 dias, laudo digital e sigilo de dados conforme a LGPD.</p></div>
+  </div>
+  <div class="container foot-copy">© <span id="ano">2026</span> Trinity Tech. Todos os direitos reservados.</div>
+</footer>
+<script src="js/main.js"></script>
+<script src="js/calculadora.js"></script>
+</body>
+</html>
